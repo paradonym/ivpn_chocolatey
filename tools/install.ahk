@@ -19,3 +19,8 @@ WinActivate
 ; BlockInput, Off
 
 ; FENSTERTEXT INSTALLER DURCHKLICKEN
+; Click next to continue -> "Next >"
+; (checkbox) I Agree
+; (Button) Install
+; up to 5+ minutes duration (AHK wait)
+; Window.close
