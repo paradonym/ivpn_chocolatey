@@ -1,6 +1,7 @@
 
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$ahk		    = Join-Path $toolsPath 'install.ahk'
 $url        = 'https://www.ivpn.net/releases/win/IVPN-Client-v2.7.7.exe'
 
 $packageArgs = @{
@@ -14,6 +15,5 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
-
-# TODO 
-# Bind AutoHotkey file
+Write-Output "Running AutoHotkey script"
+Start-ChocolateyProcessAsAdmin "`"$ahk`" `"$embedded_path`"" 'AutoHotkey.exe'
