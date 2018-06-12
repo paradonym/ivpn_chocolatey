@@ -14,3 +14,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
+
+# TODO 
+# Bind AutoHotkey file
